@@ -1,0 +1,25 @@
+# For common configuration parameters provided by the Spring framework, see:
+# http://docs.spring.io/spring-boot/docs/1.4.0.RELEASE/reference/html/common-application-properties.html
+
+server:
+  # Target port the ProductCatalogue service shall be accessible on
+  port: 8090
+
+logging:
+    # Log levels that should be used for the specified packages
+    level:
+        ROOT: INFO
+        com.netstream.tv: TRACE
+        org.springframework:
+            web: INFO
+            web.filter: DEBUG
+            boot: INFO
+            data: INFO
+    # Location of the service's log file
+    file: logs/${spring.application.name}.log
+
+spring:
+    # Application's title and whether to enable admin features
+    application:
+        name: @project.name@
+        admin.enabled: true
